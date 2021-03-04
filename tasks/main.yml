@@ -18,7 +18,7 @@
   ansible.builtin.debug:
     msg: |
       "Package 'ifupdown' is installed in version '{{ ansible_facts.packages['ifupdown'][0].version }}'.
-      Please remove it after Netplan role has been executed successfully."
+      Please consider removing it after Netplan role has been executed successfully."
   when: "'ifupdown' in ansible_facts.packages"
 
 - name: Install netplan packages.
