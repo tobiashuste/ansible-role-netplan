@@ -96,6 +96,21 @@ Flag to decide whether package 'ifupdown' should be uninstalled:
 netplan_uninstall_ifupdown: true
 ```
 
+## Troubleshooting
+
+### Cleaning Up: Please Uninstall Package ifupdown Manually
+
+In order to switch from package ifupdown to netplan the whole installation
+and configuration process of the networking need to finish successfully
+before package ifupdown can be uninstalled safely, otherwise role execution
+will hang if package ifupdown would be uninstalled too early.
+For that reason package ifupdown is not uninstalled during execution of the
+role and need to be uninstalled manually after role has been executed
+successfully.
+In case that package ifupdown is installed a message is outputted at the
+beginning of the role that you can uninstall package ifupdown safely after
+role Netplan has been executed successfully.
+
 ## Dependencies
 
 None.
