@@ -92,9 +92,9 @@ netplan_packages:
 
 ### Cleaning Up: Please Uninstall Package ifupdown Manually
 
-Before, the package `ifupdown` can be safely removed netplan networking 
+Before the package `ifupdown` can be safely removed netplan networking 
 needs to be properly configured.
-If the package would be removed too early, the role hangs.
+If the package is removed too early, the role will hang.
 
 For that reason this role does **not** handle the removal of the `ifupdown` package.
 
